@@ -1,6 +1,6 @@
 #! /bin/bash
 
-# illsutrating another file usage in one shell file
+# illsutrating another file usage in one shell file with if else statements
 
 
 if  [ -n "$pname" -a -n "$flname" ] ; then
