@@ -87,7 +87,7 @@ int main()
             printf("Orphan State Demonstration\n");
             sleep(7);
             bubbleSort(arr, n);
-            printf("Sorted array using Selection Sort (Child Process): \n");
+            printf("Sorted array using Bubble Sort (Child Process): \n");
             printArray(arr, n);
             exit(0);
         }
