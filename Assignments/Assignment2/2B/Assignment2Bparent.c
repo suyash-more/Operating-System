@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<unistd.h>
 #include<sys/types.h>
+#include<string.h>
 
 void swap(int *number1, int *number2)
 {
@@ -34,15 +35,21 @@ void sort_array(int argument_count, char* argument_array[], int *integer_array){
 
 int main(int argc, char* argv[]){
     int *integer_array;
+    char **character_array; 
     if(argc<=1){
         printf("\nArguments were not provided so no Sorting Will take place..!!\n\n");
     }
     else{
     integer_array = (int*)malloc(argc * sizeof(int));
-    sort_array(argc, argv, integer_array);
-    execv("./child", )
+    character_array = malloc(argc * sizeof(char*));
+    for (int i = 0; i < argc; i++){
+        character_array[i] = malloc(10 * sizeof(char));
     }
+
+    sort_array(argc, argv, integer_array);
     for(int i=0;i<argc;i++){
-        printf("%d\n",*(integer_array + i));
+        sprintf(*(character_array+i), "%d", *(integer_array + i));
+    }
+    execve("./child", character_array, NULL);
     }
 }
