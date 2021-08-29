@@ -87,7 +87,7 @@ do
                     echo -n "Enter the address : ";
                     read -r address;
                     echo "$address_holder $address" >> "temp.txt";
-                    cat temp.txt > "$address_book.txt";
+                    cat temp.txt > "$address_book.t xt";
                     rm temp.txt;
                 else
                     echo "No match found";
