@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         {
             character_array[i] = malloc(10 * sizeof(char));
         }
-
+        printf("Sorting the array..!!\n");
         sort_array(argc, argv, integer_array);
         for (int i = 0; i < argc; i++)
         {
