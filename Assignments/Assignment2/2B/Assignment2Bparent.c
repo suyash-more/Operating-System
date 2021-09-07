@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
             wait(NULL);
         }
         else if(pid > 0){
-            printf("Inside the parent process..!!");
+            printf("\n Back to the parent process..!!");
             wait(NULL);
         }
     }
