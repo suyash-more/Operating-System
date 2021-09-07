@@ -39,24 +39,33 @@ int main(int argc, char *argv[])
 {
     int *integer_array;
     char **character_array;
+    pid_t pid = fork();
     if (argc <= 1)
     {
         printf("\nArguments were not provided so no Sorting Will take place..!!\n\n");
     }
     else
     {
-        integer_array = (int *)malloc(argc * sizeof(int));
-        character_array = malloc(argc * sizeof(char *));
-        for (int i = 0; i < argc; i++)
+        if (pid == 0)
         {
-            character_array[i] = malloc(10 * sizeof(char));
+            integer_array = (int *)malloc(argc * sizeof(int));
+            character_array = malloc(argc * sizeof(char *));
+            for (int i = 0; i < argc; i++)
+            {
+                character_array[i] = malloc(10 * sizeof(char));
+            }
+            printf("Sorting the array..!!\n");
+            sort_array(argc, argv, integer_array);
+            for (int i = 0; i < argc; i++)
+            {
+                sprintf(*(character_array + i), "%d", *(integer_array + i));
+            }
+            execve("./child", character_array, NULL);
+            wait(NULL);
         }
-        printf("Sorting the array..!!\n");
-        sort_array(argc, argv, integer_array);
-        for (int i = 0; i < argc; i++)
-        {
-            sprintf(*(character_array + i), "%d", *(integer_array + i));
+        else if(pid > 0){
+            printf("Inside the parent process..!!");
+            wait(NULL);
         }
-        execve("./child", character_array, NULL);
     }
 }

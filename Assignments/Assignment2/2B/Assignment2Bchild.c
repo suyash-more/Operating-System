@@ -14,7 +14,7 @@ int main(int argc, char* argv[],char *envp[]){
                 continue;
             }
         else
-            printf("%s ", argv[i]);
+            printf("%s ", argv[argc - i]);
     }
     printf("\n");
 }
