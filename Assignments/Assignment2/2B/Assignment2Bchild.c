@@ -22,7 +22,7 @@ int main(int argc, char* argv[],char *envp[]){
     scanf("%s", findnum);
     for(i=0; i<argc;i++){
         if(strcmp(argv[i], findnum)==0){
-            printf("Number(%s) found at %d index", findnum, i);
+            printf("Number(%s) found at %d index", findnum, argc-i-1);
             break;
         }
     }
