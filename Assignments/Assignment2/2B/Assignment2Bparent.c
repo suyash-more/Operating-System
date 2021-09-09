@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
             {
                 character_array[i] = malloc(10 * sizeof(char));
             }
-            printf("Sorting the array..!!\n");
+            printf("\nSorting the array..!!\n\n");
             sort_array(argc, argv, integer_array);
             for (int i = 0; i < argc; i++)
             {
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
             wait(NULL);
         }
         else if(pid > 0){
-            printf("\n Back to the parent process..!!");
+            printf("\nBack to the parent process..!!");
             wait(NULL);
         }
     }
