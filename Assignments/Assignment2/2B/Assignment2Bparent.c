@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/types.h>
 #include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 void swap(int *number1, int *number2)
 {
@@ -49,10 +50,10 @@ int main(int argc, char *argv[])
         if (pid == 0)
         {
             integer_array = (int *)malloc(argc * sizeof(int));
-            character_array = malloc(argc * sizeof(char *));
+            character_array = (char **)malloc(argc * sizeof(char *));
             for (int i = 0; i < argc; i++)
             {
-                character_array[i] = malloc(10 * sizeof(char));
+                character_array[i] = (char *)malloc(10 * sizeof(char));
             }
             printf("\nSorting the array..!!\n\n");
             sort_array(argc, argv, integer_array);
