@@ -66,7 +66,7 @@ int main(){
         if(pro_no!=-1){
             copy_cpu_work_units[pro_no][0] = cpu_work_units[0]
             copy_cpu_work_units[pro_no][1] = cpu_work_units[1]
-            copy_cpu_work_units[pro_no][2] = cpu_work_units[]
+            copy_cpu_work_units[pro_no][2] = cpu_work_units[2]
             cpu_work_units[0] += (processes+pro_no-1)->allocation[0];
             cpu_work_units[1] += (processes+pro_no-1)->allocation[1];
             cpu_work_units[2] += (processes+pro_no-1)->allocation[2];
