@@ -81,7 +81,7 @@ int main(){
     printf("\nPro_no\t\tAllocation\t\tMaximum\t\tAvailable\n");
     printf("      \t\tA B C\t\t\t A B C\t\t\tA B C\n");
     for(int i=0;i<n;i++){
-        printf("P%d\t\t%d %d %d\t\t\t%d %d %d\t\t%d %d %d\n",(i+1), (processes+i)->allocation[0],(processes+i)->allocation[1],(processes+i)->allocation[2],(processes+i)->max[0],(processes+i)->max[1],(processes+i)->max[2],copy_cpu_work_units[0], copy_cpu_work_units[1], copy_cpu_work_units[2]);
+        printf("P%d\t\t%d %d %d\t\t\t%d %d %d\t\t%d %d %d\n",(i+1), (processes+i)->allocation[0],(processes+i)->allocation[1],(processes+i)->allocation[2],(processes+i)->max[0],(processes+i)->max[1],(processes+i)->max[2],copy_cpu_work_units[i][0], copy_cpu_work_units[i][1], copy_cpu_work_units[i][2]);
     }
 
     
