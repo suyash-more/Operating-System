@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 int n=5;
 
 typedef struct {
