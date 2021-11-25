@@ -1,0 +1,3 @@
+Buffer len - 3  No. of lines - 3 
+Buffer len - 8  No. of lines - 3 
+Buffer len - 7  No. of lines - 1 
