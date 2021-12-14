@@ -1,0 +1,27 @@
+ls - list
+ll - describe the info of the files
+ls -la - show all the hidden files with their info also
+grep - find pattern
+chmod - changing the file permissions
+touch 
+cat
+vi
+nano
+echo 
+sed
+export
+rm - remove 
+rm -rf - recursively delete files 
+cd - change directory
+mv
+mkdir
+cp
+scp
+make
+ping
+find
+tail
+whoami
+locate
+su
+sleep
